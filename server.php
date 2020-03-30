@@ -5,7 +5,7 @@ $username = "";
 $email    = "";
 $errors = array(); 
 
-$db = mysqli_connect("sql12.freemysqlhosting.net","sql12330072","2gqirbNtn2");
+$db = mysqli_connect("sql12.freemysqlhosting.net","sql12330072","2gqirbNtn2", "sql12330072");
 
 // REGISTER 
 if (isset($_POST['reg_user'])) {
