@@ -1,15 +1,15 @@
 <?php 
   session_start(); 
+  if(!isset($_SESSION['username'])) {
+  $_SESSION['msg'] = "You must log in first";
+  header('location:login.php');
+  }
+  if(isset($_GET['logout'])) {
+  session_destroy();
+  unset($_SESSION['username']);
+  header("location:login.php");
+  }
 $loadnav = (isset($_GET['loadnav']) && $_GET['loadnav'] != '') ? $_GET['loadnav']: '';
-  if (!isset($_SESSION['username'])) {
-  	$_SESSION['msg'] = "You must log in first";
-  	header('location:login.php');
-  }
-  if (isset($_GET['logout'])) {
-  	session_destroy();
-  	unset($_SESSION['username']);
-  	header("location:login.php");
-  }
 ?>
 
 <!DOCTYPE html>
@@ -96,101 +96,132 @@ $loadnav = (isset($_GET['loadnav']) && $_GET['loadnav'] != '') ? $_GET['loadnav'
     <div class="main_body">
       <?php 
       switch($loadnav){
+		      
         case 'cars':
-          require_once 'car.php';
-          break;
-        case 'home':
-            require_once 'home.php';
-            break;
-        case 'howtouse':
-              require_once 'howtouse.php';
-              break;
-        case 'carlist':
-          require_once 'carlist.php';
-          break;
-        case 'customers':
-          require_once 'customers.php';
-          break;
-        case 'addcustomer_confirm':
-          require_once 'addcustomer_confirm.php';
+        require_once 'car.php';
         break;
+		      
+        case 'home':
+        require_once 'home.php';
+        break;
+		      
+        case 'howtouse':
+        require_once 'howtouse.php';
+        break;
+		      
+        case 'carlist':
+        require_once 'carlist.php';
+        break;
+		      
+        case 'customers':
+        require_once 'customers.php';
+        break;
+		      
+        case 'addcustomer_confirm':
+        require_once 'addcustomer_confirm.php';
+        break;
+		      
         case 'reserve':
-          require_once 'reserve.php';
-          break;
-          case 'records':
-            require_once 'reservation_records.php';
-            break;
-          case 'reserve_confirm':
-          require_once 'reservation_confirm.php';
-          break;
-         case 'manage_reserve':
-          require_once 'manage_reserve.php';
-         break;
-         case 'manageres_confirm':
-          require_once 'manageres_confirm.php';
-         break;
+        require_once 'reserve.php';
+        break;
+		      
+        case 'records':
+        require_once 'reservation_records.php';
+        break;
+		      
+        case 'reserve_confirm':
+        require_once 'reservation_confirm.php';
+        break;
+		      
+        case 'manage_reserve':
+        require_once 'manage_reserve.php';
+        break;
+		      
+        case 'manageres_confirm':
+        require_once 'manageres_confirm.php';
+        break;
+		      
         case 'incidents':
-          require_once 'incidents.php';
-          break;
-          case 'addincidents':
-            require_once 'addincidents.php';
-            break;
+        require_once 'incidents.php';
+        break;
+		      
+        case 'addincidents':
+        require_once 'addincidents.php';
+        break;
+		      
         case 'incidentrecords':
-          require_once 'incidentrecords.php';
-          break;
+        require_once 'incidentrecords.php';
+        break;
+		      
         case 'editincident':
         require_once 'editincident.php';
         break;
+		      
         case 'deleteincident':
-          require_once 'deleteincident.php';
-          break;
-		  case 'searchcar':
-          require_once 'car.php';
-          break;
-      case 'searchcarlist':
-            require_once 'carlist.php';
-            break;
-		  case 'addcar':
-          require_once 'addcar.php';
-          break;
-          case 'addcar_confirm':
-            require_once 'addcar_confirm.php';
-          break;
-    case 'addcarlist':
-            require_once 'addcarlist.php';
-            break;
-          case 'addcarlistconfirm':
-          require_once 'addcarlistconfirm.php';
-          break;
-		  case 'editcar':
-          require_once 'editcar.php';
-          break;
-      case 'editcar_confirm':
+        require_once 'deleteincident.php';
+        break;
+		      
+        case 'searchcar':
+        require_once 'car.php';
+        break;
+		      
+        case 'searchcarlist':
+        require_once 'carlist.php';
+        break;
+		      
+        case 'addcar':
+        require_once 'addcar.php';
+        break;
+		      
+        case 'addcar_confirm':
+        require_once 'addcar_confirm.php';
+        break;
+		      
+    	case 'addcarlist':
+        require_once 'addcarlist.php';
+        break;
+		      
+        case 'addcarlistconfirm':
+        require_once 'addcarlistconfirm.php';
+        break;
+		      
+	case 'editcar':
+        require_once 'editcar.php';
+        break;
+		      
+      	case 'editcar_confirm':
         require_once 'editcar_confirm';
-      break;
-		  case 'deletecar':
-          require_once 'deletecar.php';
-          break;
-      case 'deletecar_confirm':
+      	break;
+		      
+	case 'deletecar':
+	require_once 'deletecar.php';
+        break;
+		      
+      	case 'deletecar_confirm':
         require_once 'deletecar_confirm.php';
-      break;
-		  case 'addcustomer':
-          require_once 'addcustomer.php';
-           break;
-		  case 'editcustomer':
-          require_once 'editcustomer.php';
-          break;
-      case 'editcustomer_confirm':
+     	break;
+		      
+	case 'addcustomer':
+        require_once 'addcustomer.php';
+        break;
+		      
+	case 'editcustomer':
+        require_once 'editcustomer.php';
+        break;
+		      
+      	case 'editcustomer_confirm':
         require_once 'editcustomer_confirm.php';
-      break;
-		  case 'deletecustomer':
-          require_once 'deletecustomer.php';
-          break;
-      case 'deletecustomer_confirm':
+      	break;
+		      
+	case 'deletecustomer':
+        require_once 'deletecustomer.php';
+        break;
+		      
+      	case 'deletecustomer_confirm':
         require_once 'deletecustomer_confirm';
-      break;
+      	break;
 
-    default:
+    	default:
         require_once 'home.php';
       }
       ?>
