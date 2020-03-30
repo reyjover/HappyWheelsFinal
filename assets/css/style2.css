@@ -1,0 +1,36 @@
+.form{
+    border-radius: 5px;
+    border: 2px solid lightgrey;
+    padding: 20px; 
+    height: auto;
+    width: auto;
+    background-color: lightgrey;
+    display: inline-block;
+    margin: 80px;
+}
+
+.form2{
+    border-radius: 5px;
+    border: 2px solid lightgrey;
+    padding: 20px; 
+    height: 50%;
+    width: 30%;
+    background-color: lightgrey;
+    margin: 50px;
+}
+
+.form_content{
+    text-align: left;
+}
+
+input[type=submit], input[type=number] input[type=date]{
+    background-color: #FF4500;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    opacity: 0.9;
+  }
+

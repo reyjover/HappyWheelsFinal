@@ -1,0 +1,80 @@
+.main_body {
+    text-align: center;
+    height: auto;
+    background: linear-gradient(to bottom, #ffccff 0%, #66ccff 100%);
+}
+
+.body_text {
+    font-family: 'Trebuchet MS';
+    font-size: 140%;
+}
+
+.register{
+    border-radius: 5px;
+    border: 2px solid whitesmoke;
+    padding: 20px; 
+    height: auto;
+    width: 25%;
+    background-color: whitesmoke;
+    display: inline-block;
+    margin: 80px;
+}
+
+input[type=text], input[type=number] input[type=date]{
+    width: 80%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    background: white;
+  }
+
+input[type=password], input[type=number] input[type=date]{
+    width: 80%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    background: white;
+  }
+
+input[type=email], input[type=number] input[type=date]{
+    width: 80%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    background: white;
+  }
+  
+
+.btn {
+    background-color: #FF4500;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    opacity: 0.9;
+}
+
+.btn:hover {
+        opacity: 1;
+}
+
+a:link, a:visited {
+    background-color:  #FF4500;
+    color: white;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  a:hover, a:active {
+    background-color: orange;
+  }
+
+.register h1 em {
+    font-style: normal;
+	color: 	#FF4500;
+}
+
