@@ -41,13 +41,11 @@ $loadnav = (isset($_GET['loadnav']) && $_GET['loadnav'] != '') ? $_GET['loadnav'
 
 
     <!-- ***** Preloader Start ***** -->
-    <div id="preloader">
-        <div class="jumper">
+
             <div></div>
             <div></div>
             <div></div>
-        </div>
-    </div>  
+
     <!-- ***** Preloader End ***** -->
 
     <!-- Header -->
