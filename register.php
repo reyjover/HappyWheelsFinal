@@ -35,7 +35,7 @@ include 'server.php';
 				<button type="submit" class="btn" name="reg_user">Register</button>
 
 				<p>
-					Already have an admin account? <a href="index.php">Sign in</a>
+					Already have an admin account? <a href="login.php">Sign in</a>
 				</p>
 			</form>
 		</div>
