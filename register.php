@@ -14,7 +14,9 @@ include 'server.php';
 			<h2>Register</h2></br>
 			
 			<form method="post" action="register.php">
-				<?php include('errors.php'); ?>
+				<?php 
+				include 'errors.php'; 
+				?>
 				
 				<label>Username</label>
 				<input type="text" name="username" value="<?php echo $username; ?>">
